@@ -11,17 +11,15 @@ parser = argparse.ArgumentParser(
 )
 parser.add_argument("folder", type=str, help="Folder to search for files")
 parser.add_argument("extension", type=str, help="File extension to search for")
-parser.add_argument(
-    "--api", type=str, default="https://api.zhconvert.org/convert", help="API URL"
-)
 parser.add_argument("--modify", action="store_true", help="Modify the files")
 args = parser.parse_args()
 
 
 FOLDER: Final[str] = args.folder
 EXTENSION: Final[str] = args.extension
-API: Final[str] = args.api
 MODIFY: Final[bool] = args.modify
+
+API: Final[str] = "https://api.zhconvert.org/convert"
 
 
 def extract_chinese_chars(text: str) -> list[str]:
