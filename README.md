@@ -1,3 +1,3 @@
 # source-code-translator
 
- Python script to convert Simplified Chinese to Traditional Chinese using the zhconvert API.
+Python script to convert source code from Simplified Chinese to Traditional Chinese.
