@@ -1,6 +1,6 @@
 # source-code-translator
 
-Python script to convert source code from Simplified Chinese to Traditional Chinese.
+Python script to translate source code from Simplified Chinese to Traditional Chinese.
 
 ## Usage
 

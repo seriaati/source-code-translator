@@ -7,7 +7,7 @@ from typing import Final
 import requests
 
 parser = argparse.ArgumentParser(
-    description="Python script to convert source code from Simplified Chinese to Traditional Chinese."
+    description="Python script to translate source code from Simplified Chinese to Traditional Chinese."
 )
 parser.add_argument("folder", type=str, help="Folder to search for files")
 parser.add_argument("extension", type=str, help="File extension to search for")
