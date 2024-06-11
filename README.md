@@ -1,9 +1,9 @@
 # source-code-translator
 
-Python script to translate source code from Simplified Chinese to Traditional Chinese.
+將程式碼由簡體中文轉換為繁體中文的工具。
 
-## Usage
+## 使用方式
 
-1. Clone this repository.
-2. Run `pip install -r requirements.txt` to install the required packages.
-3. Run `python translator.py <code_folder> <file_extension> --modify` to convert the source code in the specified folder to Traditional Chinese. For example, `python translator.py ./code .py --modify` will convert all Python files in the `code` folder to Traditional Chinese. Without the `--modify` flag, the script will only print checked files and found characters to the console, without translating the files.
+1. `git clone` 此專案。
+2. `pip install -r requirements.txt` 安裝相依套件。
+3. 執行 `python translator.py <code_folder> <file_extension> --modify` 以將指定資料夾中的程式碼轉換為繁體中文。例如，`python translator.py ./code .py --modify` 會將 `code` 資料夾中的所有 Python 檔案轉換為繁體中文。若不加上 `--modify` 參數，則程式只會列印出已檢查過的檔案以及找到的中文字，而不會進行翻譯。
