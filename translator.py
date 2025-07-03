@@ -29,20 +29,8 @@ API: Final[str] = "https://api.zhconvert.org/convert"
 
 
 def extract_chinese_chars(text: str) -> list[str]:
-    # Remove comments before extracting Chinese characters
-    # Single line comments: // and #
     text_no_comments = re.sub(r"//.*?$", "", text, flags=re.MULTILINE)
-    text_no_comments = re.sub(r"#.*?$", "", text_no_comments, flags=re.MULTILINE)
-
-    # Multi-line comments: /* */ and <!-- -->
     text_no_comments = re.sub(r"/\*.*?\*/", "", text_no_comments, flags=re.DOTALL)
-    text_no_comments = re.sub(r"<!--.*?-->", "", text_no_comments, flags=re.DOTALL)
-
-    # String literals (to avoid translating Chinese in strings that might be comments)
-    # Remove content within quotes to avoid translating Chinese in string literals
-    text_no_comments = re.sub(r'"[^"]*"', "", text_no_comments)
-    text_no_comments = re.sub(r"'[^']*'", "", text_no_comments)
-
     return re.findall(r"[\u4e00-\u9fff]+", text_no_comments)
 
 
